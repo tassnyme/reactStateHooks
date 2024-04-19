@@ -16,7 +16,7 @@ function App() {
     setInputValue(e.target.value);
   };
 
-  
+  //add information(title,description,posturl,rating) to the array called object
   const add = (e) => {
     
     if (e.key === 'Enter' && index <= 6) {
@@ -29,7 +29,7 @@ function App() {
     console.log(object)
   }
   
-
+  //add the object (movie ) to tabMovies and reset everything else
   const addToMovies = () => {
     const newTab = [...tabMovie, object];
     setTabMovie(newTab);

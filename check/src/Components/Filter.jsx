@@ -17,13 +17,16 @@ function Filter({ tab }) {
     setClicked("title");
     applyFilter("title");
   };
-
+  
+  //if the filter is by rating we look for movies whose rating less than the input rating andd add it to the array filteredMovies 
   const applyFilter = (filterType) => {
     if (filterType === "rate") {
       const filtered = tab.filter((item) => item[7] <= parseInt(valeur));
       setFilteredMovies(filtered);
       console.log(filtered);
-    } else if (filterType === "title") {
+    } 
+  //if the filter is by title we look for movies whose title is equal to the title given andd add it to the array filteredMovies 
+  else if (filterType === "title") {
       const filtered = tab.filter((item) => item[1].toLowerCase() === valeur.toLowerCase());
       setFilteredMovies(filtered);
       console.log(filtered);
