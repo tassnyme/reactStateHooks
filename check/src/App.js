@@ -57,7 +57,7 @@ function App() {
       <Button onClick={addToMovies} variant="outline-success">Add Movie!</Button>
       </div>
       <div>
-      <Filter tab={tabMovie}/>
+      <Filter tab={tabMovie} setTabMovie={setTabMovie} />
       </div>
       </div>
       <div>
